@@ -10,6 +10,8 @@ export default function Page({}) {
         <Link href="/" className={cn(buttonVariants({ variant: "ghost" }))}>
           home
         </Link>
+
+        <Signin />
       </div>
     </section>
   );
