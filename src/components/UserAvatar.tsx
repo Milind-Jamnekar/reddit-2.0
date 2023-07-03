@@ -14,7 +14,7 @@ const UserAvatar: FC<UserAvatarProps> = ({
   ...props
 }) => {
   return (
-    <Avatar>
+    <Avatar className="ring-2 ring-black ring-offset-2">
       {image ? (
         <div className="relative aspect-square w-full h-full">
           <Image
