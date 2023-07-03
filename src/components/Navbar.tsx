@@ -1,8 +1,11 @@
 import Link from "next/link";
 import { Icons } from "./Icons";
-import { buttonVariants } from "./ui/Button";
+import { Button, buttonVariants } from "./ui/Button";
+import { getAuthSession } from "@/lib/auth";
+import UserAcccontNav from "./UserAcccontNav";
 
-export function Navbar() {
+export const Navbar = async () => {
+  const session = await getAuthSession();
   return (
     <nav className="fixed top-3 inset-x-3 h-fit bg-zinc-100 border-4 border-zinc-800 rounded-2xl z-10 py-3">
       <div className="container h-full mx-auto flex items-center justify-between gap-2">
@@ -15,11 +18,14 @@ export function Navbar() {
         </Link>
 
         {/* Search components  */}
-
-        <Link href="/signin" className={buttonVariants()}>
-          Signin
-        </Link>
+        {session?.user ? (
+          <UserAcccontNav user={session.user} />
+        ) : (
+          <Link href="/signin" className={buttonVariants()}>
+            Signin
+          </Link>
+        )}
       </div>
     </nav>
   );
-}
+};
