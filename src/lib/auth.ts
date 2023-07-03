@@ -38,12 +38,13 @@ export const authOptions: NextAuthOptions = {
         where: { email: token.email },
       });
 
-      // return toke with id
+      // return token with id
       if (!dbUser) {
         token.id = user!.id;
         return token;
       }
 
+      // create username using nanoid if not exist
       if (!dbUser.username) {
         await db.user.update({
           where: {
