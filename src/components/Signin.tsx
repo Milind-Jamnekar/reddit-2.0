@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Icons } from "./Icons";
 import { buttonVariants } from "./ui/Button";
-import UserAutherForm from "./UserAutherForm";
+import UserAuthForm from "./UserAuthForm";
 
 const Signin = ({}) => {
   return (
@@ -19,7 +19,7 @@ const Signin = ({}) => {
           </p>
         </div>
 
-        <UserAutherForm />
+        <UserAuthForm />
 
         <span className="w-full h-1 bg-black"></span>
         <div>
