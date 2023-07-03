@@ -5,8 +5,8 @@ import UserAuthForm from "./UserAuthForm";
 
 const Signin = ({}) => {
   return (
-    <div className="container mx-auto flex w-full flex-col justify-center space-y-5 max-w-md">
-      <div className=" flex flex-col space-y-5 text-center border-4 p-6 rounded-2xl border-black">
+    <div className="relative container mx-auto flex w-full flex-col justify-center space-y-5 max-w-md">
+      <div className=" flex flex-col space-y-5 text-center p-6">
         <Icons.logo className="h-12 w-12 md:h-20 md:w-20 mx-auto" />
 
         <div>
@@ -21,18 +21,13 @@ const Signin = ({}) => {
 
         <UserAuthForm />
 
-        <span className="w-full h-1 bg-black"></span>
-        <div>
-          <p className="text-center text-zinc-800 text-lg mb-1">
-            New to breddit ?
-          </p>
-          <Link
-            href="/signup"
-            className={buttonVariants({ size: "sm" }) + " w-full"}
-          >
+        <p className="text-center text-zinc-800 text-md mb-1">
+          New to breddit ?
+          <Link className="font-semibold underline" href="/signup">
+            {" "}
             Signup
           </Link>
-        </div>
+        </p>
       </div>
     </div>
   );
