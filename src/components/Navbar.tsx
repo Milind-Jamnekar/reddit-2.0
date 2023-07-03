@@ -1,8 +1,8 @@
+import { getAuthSession } from "@/lib/auth";
 import Link from "next/link";
 import { Icons } from "./Icons";
-import { Button, buttonVariants } from "./ui/Button";
-import { getAuthSession } from "@/lib/auth";
 import UserAcccontNav from "./UserAcccontNav";
+import { buttonVariants } from "./ui/Button";
 
 export const Navbar = async () => {
   const session = await getAuthSession();
