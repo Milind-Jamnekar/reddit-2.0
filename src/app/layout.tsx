@@ -13,8 +13,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
+  authModal,
 }: {
   children: React.ReactNode;
+  authModal: React.ReactNode;
 }) {
   return (
     <html
@@ -28,7 +30,10 @@ export default function RootLayout({
         <div className="container max-w-7xl mx-auto h-full pt-12">
           {/* @ts-expect-error server component */}
           <Navbar />
-          {children}
+          {authModal}
+          <div className="container max-w-7xl mx-auto h-full pt-12">
+            {children}
+          </div>
         </div>
 
         <Toaster />
