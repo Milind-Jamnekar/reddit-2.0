@@ -1,4 +1,4 @@
-import Signin from "@/components/Signin";
+import { Signin } from "@/components/Auth";
 import { buttonVariants } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 import { ChevronLeft } from "lucide-react";

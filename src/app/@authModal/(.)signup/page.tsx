@@ -1,5 +1,5 @@
 import CloseModal from "@/components/CloseModal";
-import Signup from "@/components/Signup";
+import { Signup } from "@/components/Auth";
 import { FC } from "react";
 
 interface pageProps {}
